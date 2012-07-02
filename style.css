@@ -1,0 +1,43 @@
+.mycenter{
+position: absolute;
+ left: 100px;
+ top: 50px;
+}
+.myText{
+  font-family:arial,helvetica,verdana ,sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing:-0.9px;
+  text-decoration: none;
+}
+.myBigText{
+  font-family:arial,helvetica,verdana ,sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing:-0.9px;
+  text-decoration: none;
+}
+.klein{
+font-size: 16px;
+letter-spacing:-0.9px;
+}
+
+.gross{
+font-size: 24px;
+}
+
+body { 
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	background-color : #654321; 
+}
+table{
+  font-family:arial,helvetica,verdana ,sans-serif;
+  font-size: 14			px;
+color: #ffffff;
+  letter-spacing:1px;
+  text-decoration: none;
+}
+

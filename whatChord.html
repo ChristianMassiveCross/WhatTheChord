@@ -1,0 +1,48 @@
+<html>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<head>
+<title>what a Chord</title>
+<script type="text/javascript" src="scale.js"></script>
+<script type="text/javascript" src="chord.js"></script>
+<script type="text/javascript" src="chordStore.js"></script>
+<script type="text/javascript" src="chordMapping.js"></script>
+
+</head>
+<body>
+<ol id='qunit-tests'></ol>
+
+<SCRIPT type="text/javascript">
+
+window.onload = function(){
+    this.myChord = new chordMapping();
+    myChord.writeScaleToElement('noten');
+    myChord.writeChordToElement('chordTable');
+}
+
+</SCRIPT>
+<div class="myText">
+<p>Noten: <span id="noten">-</span></p>
+</div>
+<div class="myBigText">
+<p><span id="chordNote">-</span> <span id="chordType">-</span></p>
+</div>
+<form>
+				<table>
+					<tr valign="top">
+						<td>match: </td>
+						<td><input type ="text" id="noteEins" 	size="2"></td>
+						<td><input type ="text" id="noteZwei" 	size="2"></td>
+						<td><input type ="text" id="noteDrei" 	size="2"></td>
+						<td><input type ="text" id="noteVier" 	size="2"></td>
+                        <td><input type ="text" id="noteFuenf" 	size="2"></td>
+						<td><input type ="text" id="noteSechs" 	size="2"></td>
+						<td><a href="javascript:this.myChord.whichChord()">und ab</a></td>
+                        <td><table id="chordTable"></table></td>
+					</tr>
+				</table>
+			</form>
+</span>
+</body>
+</html>
+
