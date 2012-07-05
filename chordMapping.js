@@ -25,9 +25,8 @@ chordMapping.prototype.writeChordToElement = function (name){
   var chordTypes = this.chords.Chords;
     var collectToTable = '';
    for (var i=0;i<chordTypes.length;i++){
-        collectToTable += "<tr><td>"+chordTypes[i].name+"</td></tr>";
+        collectToTable += "<li>"+chordTypes[i].name+"</li>";
     }
-    console.log(collectToTable);
     document.getElementById(name).innerHTML = collectToTable;
 }
 chordMapping.prototype.getNotes = function (){
