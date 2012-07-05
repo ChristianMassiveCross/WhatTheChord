@@ -1,0 +1,64 @@
+<html>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<head>
+<title>what a Chord</title>
+<script type="text/javascript" src="http://anke-augustin.de/borsti/scale.js"></script>
+<script type="text/javascript" src="http://anke-augustin.de/borsti/chord.js"></script>
+<script type="text/javascript" src="http://anke-augustin.de/borsti/chordStore.js"></script>
+<script type="text/javascript" src="http://anke-augustin.de/borsti/chordMapping.js"></script>
+
+<SCRIPT type="text/javascript">
+		window.onload = function(){
+				this.myChord = new chordMapping();
+				myChord.writeScaleToElement('noten');
+				myChord.writeChordToElement('chordTable');
+		}
+</SCRIPT>
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="main">
+
+
+			<div id="notes">
+					<b>Notes: </b>
+					<span id="noten">-</span>
+			</div>
+
+			<form action="#" id="match" onsubmit="">
+				<b>Match:</b>
+				<input type ="text" class="input" id="noteEins" size="2">
+				<input type ="text" class="input"  id="noteZwei" size="2">
+				<input type ="text" class="input"  id="noteDrei" size="2">
+				<input type ="text" class="input"  id="noteVier" size="2">
+				<input type ="text" class="input"  id="noteFuenf" size="2">
+				<input type ="text" class="input"  id="noteSechs" size="2"></td>
+
+				<input type="submit" class="submit" value="submit" onClick="myChord.whichChord()"/>
+
+			</form>
+
+			<div id="cords">
+				<b>Cords:</b>
+				<span id="chordNote">-</span>
+				<span id="chordType">-</span>
+			</div>
+
+			<div id="possibleCords">
+				<b>Possible Cords:</b>
+				<ul id="chordTable"></ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<ol id='qunit-tests'></ol>
+
+</body>
+</html>
+
