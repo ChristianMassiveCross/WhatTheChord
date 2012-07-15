@@ -50,11 +50,10 @@ chordMapping.prototype.buildChord = function(numberNotes){
     var chordTypes = this.chords.Chords;
     var returnChord = new Array();
     for(var i=0;i<chordTypes.length;i++){
-         var matchChord = chordTypes[i].getChordAndRootNote(numberNotes)
-        if(matchChord){
+         var matchChord = chordTypes[i].getChordAndRootNote(numberNotes);
+        if(matchChord[0]){
          var rootNumber = numberNotes[matchChord[1]];
          matchChord[1] = this.scales.getNoteByNumber(rootNumber);
-      //  console.log(matchChord);
          break;
         }
     }
