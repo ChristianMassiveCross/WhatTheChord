@@ -1,0 +1,60 @@
+<html>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<head>
+		<title>ScaleConverterTest</title>
+		<link rel='stylesheet' href='qunit.css' type='text/css' media='screen' />
+		<script type='text/javascript' src='qunit.js'></script>
+		<script type="text/javascript" src="../scale.js"></script>
+		<script type="text/javascript" src="../scaleConverter.js"></script>
+	</head>
+	<body>
+		<ol id='qunit-tests'></ol>
+		<SCRIPT type="text/javascript">
+		window.onload= function(){
+			var myScaleConverter = new scaleConverter(new Array("c","c#","d","d#","e","f","f#","g","g#","a","a#","h"),new Array('major')); 
+			test("myScaleConverter.getScale", function () {
+				equal(myScaleConverter.getScale().join('-'),'c-c#-d-d#-e-f-f#-g-g#-a-a#-h', "get Scale");
+			});
+			test("myScaleConverter.getScaleName", function () {
+				equal(myScaleConverter.getScaleName(),'major', "get ScaleName");
+			}); 
+
+			test("myScaleConverter.isTheValueAlreadyInTheArray", function () {
+				equal(myScaleConverter.isTheValueAlreadyInTheArray(new Array('a','b','c'),'a'),true, "isTheValueAlreadyInTheArray abc ? a");
+				equal(myScaleConverter.isTheValueAlreadyInTheArray(new Array('b','a','c'),'a'),true, "isTheValueAlreadyInTheArray bac ? a");
+				equal(myScaleConverter.isTheValueAlreadyInTheArray(new Array('b','c','a'),'a'),true, "isTheValueAlreadyInTheArray bca ? a");
+				equal(myScaleConverter.isTheValueAlreadyInTheArray(new Array('b','c','x'),'a'),false, "isTheValueAlreadyInTheArray bcx ? a");
+			}); 
+			test("myScaleConverter.killDoubleNotes", function () {
+				equal(myScaleConverter.killDoubleNotes(new Array('a','b','c')).join('-'),'a-b-c', "killDoubleNotes a,b,c => a,b,c");
+				equal(myScaleConverter.killDoubleNotes(new Array('a','a','c')).join('-'),'a-c', "killDoubleNotes a,a,c => a,c");
+				equal(myScaleConverter.killDoubleNotes(new Array('c','a','a')).join('-'),'c-a', "killDoubleNotes c,a,a =>c,a");
+				equal(myScaleConverter.killDoubleNotes(new Array('a','c','a')).join('-'),'a-c', "killDoubleNotes a,c,a =>a,c");
+				equal(myScaleConverter.killDoubleNotes(new Array('a','a','a')).join('-'),'a', "killDoubleNotes a,a,a => a");
+			}); 
+
+			test('myScaleConverter.calcIntervalls', function (){
+				equal(myScaleConverter.calcIntervalls(new Array(0,1,2)).join('-'),'1-1','intervalls of c-dur');
+			});
+			test('myScaleConverter.notesToIntervalls-test for Doubles', function (){
+				equal(myScaleConverter.notesToIntervalls(new Array('c','e','g')).join('-'),'4-3','intervalls of c-dur');
+				equal(myScaleConverter.notesToIntervalls(new Array('c','c','e','g')).join('-'),'4-3','intervalls of c-dur (with double note)');
+			});
+			test('myScaleConverter.notesToIntervalls-test for sort', function (){
+				equal(myScaleConverter.notesToIntervalls(new Array('a','c','e')).join('-'),'4-5','intervalls of a-moll with a-c-e');
+				equal(myScaleConverter.notesToIntervalls(new Array('a','e','c')).join('-'),'4-5','intervalls of a-moll with a-e-c');
+				equal(myScaleConverter.notesToIntervalls(new Array('c','a','e')).join('-'),'4-5','intervalls of a-moll with c-a-e');
+				equal(myScaleConverter.notesToIntervalls(new Array('c','e','a')).join('-'),'4-5','intervalls of a-moll with c-e-a');
+				equal(myScaleConverter.notesToIntervalls(new Array('e','c','a')).join('-'),'4-5','intervalls of a-moll with c-e-a');
+				equal(myScaleConverter.notesToIntervalls(new Array('e','a','c')).join('-'),'4-5','intervalls of a-moll with c-e-a');
+			});
+			test('myScaleConverter.IntervallsToNotes', function (){
+				equal(myScaleConverter.IntervallsToNotes(new Array(4,3),'a').join('-'),'a-c#-e','notes a Dur (a-c#-e)');
+
+			});
+		}
+		</SCRIPT>
+	</body>
+</html>
+

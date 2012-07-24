@@ -1,0 +1,30 @@
+<html>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<head>
+		<title>ChordTest</title>
+		<link rel='stylesheet' href='qunit.css' type='text/css' media='screen' />
+		<script type='text/javascript' src='qunit.js'></script>
+		<script type="text/javascript" src="../scale.js"></script>
+		<script type="text/javascript" src="../chord.js"></script>
+	</head>
+	<body>
+		<ol id='qunit-tests'></ol>
+		<SCRIPT type="text/javascript">
+		window.onload= function(){
+	/*
+		so hier gehts weiter mal  
+	*/
+			var myChord = new chord(new Array(4,5),1); 
+			test("myInversion.getRootNoteNumber", function () {
+				equal(myInversion.getRootNoteNumber(),'1', "get Root Note Number");
+			});
+			test("myInversion.isInversionEqual", function () {
+				equal(myInversion.isInversionEqual(new Array(4,5)),true, "test a equal value");
+				equal(myInversion.isInversionEqual(new Array(1,5)),false, "test a unequal value");
+			});
+		}
+		</SCRIPT>
+	</body>
+</html>
+

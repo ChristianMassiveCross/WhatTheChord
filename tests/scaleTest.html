@@ -1,0 +1,44 @@
+<html>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<head>
+		<title>ScaleTest</title>
+		<link rel='stylesheet' href='qunit.css' type='text/css' media='screen' />
+		<script type='text/javascript' src='qunit.js'></script>
+		<script type="text/javascript" src="../scale.js"></script>
+	</head>
+	<body>
+		<ol id='qunit-tests'></ol>
+		<SCRIPT type="text/javascript">
+		window.onload= function(){
+			var myScale = new scale(new Array("c","c#","d","d#","e","f","f#","g","g#","a","a#","h"),new Array('major'));
+			test("Scale.getScale", function () {
+				equal(myScale.getScale().join('-'),'c-c#-d-d#-e-f-f#-g-g#-a-a#-h', "get Scale");
+			});
+			test("Scale.getScaleName", function () {
+				equal(myScale.getScaleName(),'major', "get ScaleName");
+			});          
+			test("Scale.limitToLenght", function () {
+				equal(myScale.limitToLenght(0)   , 0,  "limit scale 0 -> 0");
+				equal(myScale.limitToLenght(11)  , 11, "limit scale 11 -> 11");
+				equal(myScale.limitToLenght(12)  , 0,  "limit scale 12 -> 0");
+				equal(myScale.limitToLenght(-1)  , 11, "limit scale -1 -> 11");
+				equal(myScale.limitToLenght(-2)  , 10, "limit scale -2 -> 10");
+				equal(myScale.limitToLenght(-12) , 0,  "limit scale -12 -> 0");
+				equal(myScale.limitToLenght(-13) , 11, "limit scale -13 -> 11");
+			});
+			test("Scale.getNoteByNumber", function () {
+				equal(myScale.getNoteByNumber(0)  , 'c', "getNoteByNumber  0 -> c");
+				equal(myScale.getNoteByNumber(11) , 'h', "getNoteByNumber 11 -> h");
+				equal(myScale.getNoteByNumber(12) , 'c', "getNoteByNumber 12 -> c");
+				equal(myScale.getNoteByNumber(-1) , 'h', "getNoteByNumber -1 -> h");
+			});
+			test("Scale.getNumberByNote", function () {
+				equal(myScale.getNumberByNote('c') , 0, "scale c -> 0");
+				equal(myScale.getNumberByNote('h') , 11, "scale h -> 11");
+			});
+		}
+		</SCRIPT>
+	</body>
+</html>
+
