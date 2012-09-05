@@ -142,6 +142,12 @@ function GuitarController($scope) {
 		
 	}
 
+	function setFretPos() {
+
+		
+
+	}
+
 }
 
 function getChord(notes) {
