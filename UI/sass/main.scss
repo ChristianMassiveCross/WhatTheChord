@@ -1,0 +1,43 @@
+
+body{	
+	@include user-select(none);
+	background-image: url("#{$img}pattern.jpg");
+}
+// .page{
+// 	@include susy-grid-background;
+// 	// @include debug;
+
+// 	.result{
+// 		// @include debug;
+// 	}
+// }
+// .neck{
+// 	@include susy-grid-background;
+// }
+
+body{
+	font-family:$font-family;
+}
+
+.page {
+	@include container;
+}
+
+header{
+	@include span-columns(12);
+	@include adjust-font-size-to(18px);
+}
+footer{
+	@include span-columns(12);
+}
+
+
+
+
+
+.show{
+	@include show;
+}
+.hide{
+	@include hide;
+}

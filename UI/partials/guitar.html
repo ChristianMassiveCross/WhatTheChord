@@ -1,0 +1,87 @@
+<div id="guitar" ng-controller="GuitarController">
+
+    <div class="neck">
+
+        <div class="sticks">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>                        
+        </div>
+
+        
+        <div class="dots">
+            <div class="wrapper">
+                <div><span>3</span></div>
+                <div><span>5</span></div>
+                <div><span>7</span></div>
+                <div><span>9</span></div> 
+                <div><span>12</span></div>  
+            </div>                          
+        </div>
+
+
+        <div class="strings">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="notes_0">
+            
+            <div ng-repeat = "note in notes_0" 
+                 ng-click  = "clickNote(note, $index+1)"
+                 class     = "note {{isActiveNote(note, $index+1)}}"
+                 >
+                <div class="dot">{{note.name}}</div>
+            </div>
+
+        </div>  
+
+        <div class="notes">
+            
+            <div ng-repeat="string in strings">  
+                <div ng-repeat = "note in string" 
+                     ng-click  = "clickNote(note, $parent.$index+1)"
+                     class     = "note {{isActiveNote(note, $parent.$index+1)}}" 
+                     >
+                    <div class="dot" ng-hide="numbers" >{{note.name}}</div>
+                    <div class="dot" ng-hide="!numbers">{{note.nr}}  </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="result">
+        <h1>{{chord.name}}</h1>
+    </div>
+
+    <div class="controls">
+
+        <div class="fret_slider">
+            <div class="numbers">
+                <span>3</span>
+                <span>5</span>
+                <span>7</span>
+                <span>9</span>
+                <span>12</span>
+            </div>
+            <div class="slider" 
+                    ng-mousedown  = "dragSlider=true;" 
+                    ng-mouseup    = "dragSlider=false; roundSliderPos($event);"
+                    ng-mouseleave = "dragSlider=false"
+                    ng-mousemove  = "moveSlider($event, dragSlider)"></div>
+        </div>
+
+        <button ng-click="toggleShowNumbers()">{{labelNumbers}}</button>                   
+        <button ng-click="clearNotesClicked()">{{labelClear}}</button>   
+
+    </div>
+</div>

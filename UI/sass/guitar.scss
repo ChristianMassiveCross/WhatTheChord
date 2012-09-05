@@ -1,0 +1,360 @@
+
+#guitar{
+	@include squish(1,1);
+	@include span-columns(10);
+	@include rhythm(1,3,1,1);
+	
+	width:685px;
+	
+	background: url("#{$img}purty_wood.jpg") repeat;
+
+	@include border-radius(100px, 30px);
+	@include border-radius(10px);
+	@include single-box-shadow(rgba(black,0.3), 0, 0, 30px);
+
+	.result{
+		@include pre(0.5,10);
+		@include span-columns(2,10);	
+
+		h1{
+			font-family:League;
+			@include adjust-font-size-to(52px);
+
+			color:rgba(25,25,25, 0.9);
+			@include single-text-shadow(2px,1px,0px,rgba(white, 0.7));
+		}
+	}
+
+	.controls{
+		@include squish(1,1, 10);
+		@include span-columns(6,10);
+		@include rhythm(1);
+
+		.fret_slider{
+			width:$neck_length;
+			height:20px;
+
+			@include margin-trailer(1);
+			
+			border:1px solid gray;
+			@include border-radius(2px);
+
+			$col1: rgba(white,0.3);
+			$col2: rgba(black,0.3);
+
+			@include background( linear-gradient(left, 
+				color-stops( 
+					$col1 8.33%, 	$col2 8.33%, 	$col2 8.33%*2,
+					$col1 8.33%*2,  $col1 8.33%*3,  $col2 8.33%*3,
+					$col2 8.33%*4,  $col1 8.33%*4,  $col1 8.33%*5,
+					$col2 8.33%*5,  $col2 8.33%*6,  $col1 8.33%*6,
+					$col1 8.33%*7,  $col2 8.33%*7,  $col2 8.33%*8,
+					$col1 8.33%*8,  $col1 8.33%*9,  $col2 8.33%*9,
+					$col2 8.33%*10, $col1 8.33%*10, $col1 8.33%*11,
+					$col2 8.33%*11, $col2 100%
+
+				)) );
+
+			.slider{
+				position: relative;
+				z-index:20;
+
+				width:$neck-length/2;
+				height:20px;
+
+				padding:4px 0;
+				margin:-5px 0 0 0;
+				margin-left:0px;
+
+				border:1px dotted gray;
+				@include border-radius(20px,5px);
+
+				background-color:rgba(maroon,0.2);
+				cursor:hand;
+
+				&:hover{
+					border:1px solid gray;
+					background-color:rgba(maroon,0.3);
+				}
+
+			}
+
+			.numbers{
+				position:absolute;
+				z-index:19;
+				
+				width:$neck_length;
+				margin-top:2px;
+
+				font-family:League;
+
+				span{
+					float:left;
+					margin-right:64px;
+
+					&:first-child{
+						margin-left:80px;
+					}
+					&:nth-child(4){
+						margin-right:98px;
+					}
+					&:last-child{
+						margin-right:0;
+					}
+				}
+			}
+		}
+
+		button{
+			width:35px;
+			height:35px;
+			border:1px solid rgba(white, 0.5);
+			@include border-radius(7px);
+
+			&:hover{
+			}
+		}
+
+	}
+}
+
+#guitar .neck{
+	@include pre(1, 10); 
+	width:$neck-length;
+	float:left;
+
+	height: image-height("#{$img}wood.jpg");
+	background: url("#{$img}wood.jpg") repeat;
+	overflow:hidden;
+
+	border-top:1px solid rgba(white, 0.5);
+	border-left:1px solid rgba(white, 0.5);
+	border-right:2px solid rgba(white, 1);
+	border-bottom:1px solid rgba(white, 0.8);
+
+	@include border-radius(10px);
+
+	.sticks div{
+		@include span-columns(1,5);
+		width:10px;
+		height: image-height("#{$img}wood.jpg") + 6;
+
+		margin:-3px 0 0 -1px;
+		@include border-radius(10px, 5px);
+		@include single-box-shadow(rgba(black, 0.5), 1px,1px,10px);
+		
+		background: rgb(234,227,216);
+		background: -moz-linear-gradient(left,  rgba(234,227,216,1) 0%, rgba(218,210,194,1) 30%, rgba(196,183,162,1) 57%, rgba(243,226,193,1) 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(234,227,216,1)), color-stop(30%,rgba(218,210,194,1)), color-stop(57%,rgba(196,183,162,1)), color-stop(100%,rgba(243,226,193,1)));
+		background: -webkit-linear-gradient(left,  rgba(234,227,216,1) 0%,rgba(218,210,194,1) 30%,rgba(196,183,162,1) 57%,rgba(243,226,193,1) 100%);
+		background: -o-linear-gradient(left,  rgba(234,227,216,1) 0%,rgba(218,210,194,1) 30%,rgba(196,183,162,1) 57%,rgba(243,226,193,1) 100%);
+		background: -ms-linear-gradient(left,  rgba(234,227,216,1) 0%,rgba(218,210,194,1) 30%,rgba(196,183,162,1) 57%,rgba(243,226,193,1) 100%);
+		background: linear-gradient(to right,  rgba(234,227,216,1) 0%,rgba(218,210,194,1) 30%,rgba(196,183,162,1) 57%,rgba(243,226,193,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eae3d8', endColorstr='#f3e2c1',GradientType=1 );
+
+	 
+		// last 5 child elements
+		&:nth-last-child(-n+5){
+			width:5px;
+			height: image-height("#{$img}wood.jpg") + 2;
+			margin:-1px 0 0 -1px;
+			@include pre(1,6);
+			@include single-box-shadow(rgba(black, 0.8), 1px,1px,20px);
+		}
+
+	}
+
+	.dots{
+		position:absolute;
+		z-index:10;	
+		
+		width:$neck_length;
+		height: 25px;
+		overflow:hidden;
+
+		top: 115 + (image-height("#{$img}wood.jpg") / 2);
+		
+		.wrapper{
+			position:absolute;
+			// $('.dots .wrapper').animate({left:'-75px'})
+		
+			div{
+				position:absolute;
+				
+				// left:-75px; 1 Bund == 75 pixel
+				
+				width:20px;
+				height:20px;
+				
+				@include border-radius(20px);
+				background:rgba(white, 0.8);
+				border:1px solid gray;
+
+				span{
+					font-family:League;
+					line-height:22px;
+					margin:7px;
+					color:rgba(black, 0.6);
+				}
+				
+				&:nth-child(1){		
+					margin-left:185px;
+				}
+				&:nth-child(2){
+					margin-left:335px;
+				}
+				&:nth-child(3){
+					margin-left:485px;
+				}
+				&:nth-child(4){
+					margin-left:635px;
+				}
+				&:nth-child(5){
+					display:none;
+				}
+			}
+		}
+	}
+
+	.strings{
+		position:absolute;
+		z-index:11;
+		width: #{$neck-length - 10};	
+		margin-left:10px;
+		
+		div{
+			margin-top:25px;
+			border-bottom:1px dotted rgba(gray,0.3);
+		}
+		div:first-child{
+			width:100%;
+			margin-top:15px;
+			border-bottom:1px dotted rgba(gray,0.3);
+		}
+	}
+
+
+	.notes, .notes_0{
+		position: absolute;
+		z-index:12;
+
+		width: #{$neck-length - 8};
+		height: image-height("#{$img}wood.jpg");
+
+		margin-left:8px;
+
+		div:last-child{
+			.note{
+				padding-bottom:5px;
+			}
+		}
+		.note {
+			float:left;
+			width:24px;
+			padding:4px 26px 0px 26px;
+			
+			opacity:0;
+			
+			
+			//--- Note area button states 
+
+			// hover note area
+			&:hover, &.active{	
+				cursor: hand;
+				opacity:1;
+			}
+			// mouse down note area
+			&:active{
+				.dot{
+					@include single-box-shadow(rgba(gray,0.5), 0, 0, 5px);
+				}
+			}
+			// clicked note area
+			&.active{
+				.dot{
+					@include single-box-shadow(rgba(gray,0.5), 0, 0, 5px);
+					border:1px solid rgba(white, 0.7);
+				}
+			}
+			// mouse down on active note area
+			&.active:active{
+				.dot{
+					border:1px solid rgba(white, 0.2);					
+				}
+			}
+
+			.dot{
+				width: 20px;
+				height: 20px;
+
+				border:1px solid rgba(white, 0.2);
+				@include border-radius(20px);
+				background: #331a18;
+
+				font-family:League;
+				font-size:16px;
+				text-transform:uppercase;
+				text-align:center;
+				color:rgba(white, 0.8);
+				@include user-select(none);
+			}
+
+			@include transition-property(opacity);
+  			@include transition-duration(0.1s);
+  			@include transition-timing-function(ease-in);
+			
+		}
+	}
+
+	.notes_0{
+		width:30px;
+		margin-left:-60px;
+
+		.note{
+			clear:both;
+			opacity: 0.5;
+
+			.dot{
+				border:1px solid rgba(gray, 0.7);
+			}
+
+			// mouse down note area
+			&:active{
+				.dot{
+					@include single-box-shadow(rgba(gray,0.7), 0, 0, 15px);
+				}
+			}
+			// clicked note area
+			&.active{
+				.dot{
+					@include single-box-shadow(rgba(gray,0.7), 0, 0, 15px);
+					border:1px solid rgba(white, 0.7);
+				}
+			}
+			// mouse down on active note area
+			&.active:active{
+				.dot{
+					@include single-box-shadow(rgba(gray,0.7), 0, 0, 15px);
+					border:1px solid rgba(gray, 0.7);					
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+    #guitar {
+		background: url("#{$img}purty_wood@2x.jpg") repeat;
+		background-size:50%;
+
+		.neck{
+				background: url("#{$img}wood@2x.jpg") repeat;
+				background-size:50%;
+		}
+	}
+	
+}

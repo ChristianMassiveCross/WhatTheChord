@@ -1,0 +1,473 @@
+@import url(normalizeHBP5.css);
+/**
+********************************	
+*
+*	Basic CSS Configuration	
+*
+********************************
+**/
+/*
+* Set Variables
+*/
+/*
+* Module Imports
+*/
+/* line 66, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 87.5%;
+  line-height: 1.5em;
+}
+
+/*
+* Mixins
+*/
+@font-face {
+  font-family: "League";
+  src: url("fonts/League/League_Gothic-webfont.eot");
+  src: url("fonts/League/League_Gothic-webfont.eot?#iefix") format("eot"), url("fonts/League/League_Gothic-webfont.ttf") format("truetype"), url("fonts/League/League_Gothic-webfont.woff") format("woff"), url("fonts/League/League_Gothic-webfont.svg") format("svg");
+  font-weight: normal;
+}
+
+/* line 18, ../sass/style.scss */
+.font_league {
+  font-family: League;
+}
+
+/* line 2, ../sass/main.scss */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-image: url("../img/pattern.jpg");
+}
+
+/* line 18, ../sass/main.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 22, ../sass/main.scss */
+.page {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 26, ../sass/main.scss */
+header {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  font-size: 1.28571em;
+  line-height: 2.33333em;
+}
+
+/* line 30, ../sass/main.scss */
+footer {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 38, ../sass/main.scss */
+.show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+}
+
+/* line 41, ../sass/main.scss */
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* line 2, ../sass/guitar.scss */
+#guitar {
+  margin-left: 8.47458%;
+  margin-right: 8.47458%;
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  margin-top: 1.5em;
+  padding-top: 4.5em;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  width: 685px;
+  background: url("../img/purty_wood.jpg") repeat;
+  -webkit-border-radius: 100px 30px;
+  -moz-border-radius: 100px / 30px;
+  border-radius: 100px / 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+/* line 15, ../sass/guitar.scss */
+#guitar .result {
+  margin-left: 6.12245%;
+  width: 18.36735%;
+  float: left;
+  margin-right: 2.04082%;
+  display: inline;
+}
+/* line 19, ../sass/guitar.scss */
+#guitar .result h1 {
+  font-family: League;
+  font-size: 3.71429em;
+  line-height: 1.21154em;
+  color: rgba(25, 25, 25, 0.9);
+  text-shadow: 2px 1px 0px rgba(255, 255, 255, 0.7);
+}
+/* line 28, ../sass/guitar.scss */
+#guitar .controls {
+  margin-left: 10.20408%;
+  margin-right: 10.20408%;
+  width: 59.18367%;
+  float: left;
+  margin-right: 2.04082%;
+  display: inline;
+  margin-top: 1.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+}
+/* line 33, ../sass/guitar.scss */
+#guitar .controls .fret_slider {
+  width: 410px;
+  height: 20px;
+  margin-bottom: 1.5em;
+  border: 1px solid gray;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(8.33%, rgba(255, 255, 255, 0.3)), color-stop(8.33%, rgba(0, 0, 0, 0.3)), color-stop(16.66%, rgba(0, 0, 0, 0.3)), color-stop(16.66%, rgba(255, 255, 255, 0.3)), color-stop(24.99%, rgba(255, 255, 255, 0.3)), color-stop(24.99%, rgba(0, 0, 0, 0.3)), color-stop(33.32%, rgba(0, 0, 0, 0.3)), color-stop(33.32%, rgba(255, 255, 255, 0.3)), color-stop(41.65%, rgba(255, 255, 255, 0.3)), color-stop(41.65%, rgba(0, 0, 0, 0.3)), color-stop(49.98%, rgba(0, 0, 0, 0.3)), color-stop(49.98%, rgba(255, 255, 255, 0.3)), color-stop(58.31%, rgba(255, 255, 255, 0.3)), color-stop(58.31%, rgba(0, 0, 0, 0.3)), color-stop(66.64%, rgba(0, 0, 0, 0.3)), color-stop(66.64%, rgba(255, 255, 255, 0.3)), color-stop(74.97%, rgba(255, 255, 255, 0.3)), color-stop(74.97%, rgba(0, 0, 0, 0.3)), color-stop(83.3%, rgba(0, 0, 0, 0.3)), color-stop(83.3%, rgba(255, 255, 255, 0.3)), color-stop(91.63%, rgba(255, 255, 255, 0.3)), color-stop(91.63%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
+}
+/* line 58, ../sass/guitar.scss */
+#guitar .controls .fret_slider .slider {
+  position: relative;
+  z-index: 20;
+  width: 205px;
+  height: 20px;
+  padding: 4px 0;
+  margin: -5px 0 0 0;
+  margin-left: 0px;
+  border: 1px dotted gray;
+  -webkit-border-radius: 20px 5px;
+  -moz-border-radius: 20px / 5px;
+  border-radius: 20px / 5px;
+  background-color: rgba(128, 0, 0, 0.2);
+  cursor: hand;
+}
+/* line 75, ../sass/guitar.scss */
+#guitar .controls .fret_slider .slider:hover {
+  border: 1px solid gray;
+  background-color: rgba(128, 0, 0, 0.3);
+}
+/* line 82, ../sass/guitar.scss */
+#guitar .controls .fret_slider .numbers {
+  position: absolute;
+  z-index: 19;
+  width: 410px;
+  margin-top: 2px;
+  font-family: League;
+}
+/* line 91, ../sass/guitar.scss */
+#guitar .controls .fret_slider .numbers span {
+  float: left;
+  margin-right: 64px;
+}
+/* line 95, ../sass/guitar.scss */
+#guitar .controls .fret_slider .numbers span:first-child {
+  margin-left: 80px;
+}
+/* line 98, ../sass/guitar.scss */
+#guitar .controls .fret_slider .numbers span:nth-child(4) {
+  margin-right: 98px;
+}
+/* line 101, ../sass/guitar.scss */
+#guitar .controls .fret_slider .numbers span:last-child {
+  margin-right: 0;
+}
+/* line 108, ../sass/guitar.scss */
+#guitar .controls button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 121, ../sass/guitar.scss */
+#guitar .neck {
+  margin-left: 10.20408%;
+  width: 410px;
+  float: left;
+  height: 161px;
+  background: url("../img/wood.jpg") repeat;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 137, ../sass/guitar.scss */
+#guitar .neck .sticks div {
+  width: 16.66667%;
+  float: left;
+  margin-right: 4.16667%;
+  display: inline;
+  width: 10px;
+  height: 167px;
+  margin: -3px 0 0 -1px;
+  -webkit-border-radius: 10px 5px;
+  -moz-border-radius: 10px / 5px;
+  border-radius: 10px / 5px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  background: #eae3d8;
+  background: -moz-linear-gradient(left, #eae3d8 0%, #dad2c2 30%, #c4b7a2 57%, #f3e2c1 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #eae3d8), color-stop(30%, #dad2c2), color-stop(57%, #c4b7a2), color-stop(100%, #f3e2c1));
+  background: -webkit-linear-gradient(left, #eae3d8 0%, #dad2c2 30%, #c4b7a2 57%, #f3e2c1 100%);
+  background: -o-linear-gradient(left, #eae3d8 0%, #dad2c2 30%, #c4b7a2 57%, #f3e2c1 100%);
+  background: -ms-linear-gradient(left, #eae3d8 0%, #dad2c2 30%, #c4b7a2 57%, #f3e2c1 100%);
+  background: linear-gradient(to right, #eae3d8 0%, #dad2c2 30%, #c4b7a2 57%, #f3e2c1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae3d8', endColorstr='#f3e2c1',GradientType=1 );
+}
+/* line 157, ../sass/guitar.scss */
+#guitar .neck .sticks div:nth-last-child(-n+5) {
+  width: 5px;
+  height: 163px;
+  margin: -1px 0 0 -1px;
+  margin-left: 17.24138%;
+  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
+}
+/* line 167, ../sass/guitar.scss */
+#guitar .neck .dots {
+  position: absolute;
+  z-index: 10;
+  width: 410px;
+  height: 25px;
+  overflow: hidden;
+  top: 195.5px;
+}
+/* line 177, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper {
+  position: absolute;
+}
+/* line 181, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid gray;
+}
+/* line 193, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div span {
+  font-family: League;
+  line-height: 22px;
+  margin: 7px;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* line 200, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div:nth-child(1) {
+  margin-left: 185px;
+}
+/* line 203, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div:nth-child(2) {
+  margin-left: 335px;
+}
+/* line 206, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div:nth-child(3) {
+  margin-left: 485px;
+}
+/* line 209, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div:nth-child(4) {
+  margin-left: 635px;
+}
+/* line 212, ../sass/guitar.scss */
+#guitar .neck .dots .wrapper div:nth-child(5) {
+  display: none;
+}
+/* line 219, ../sass/guitar.scss */
+#guitar .neck .strings {
+  position: absolute;
+  z-index: 11;
+  width: 400px;
+  margin-left: 10px;
+}
+/* line 225, ../sass/guitar.scss */
+#guitar .neck .strings div {
+  margin-top: 25px;
+  border-bottom: 1px dotted rgba(128, 128, 128, 0.3);
+}
+/* line 229, ../sass/guitar.scss */
+#guitar .neck .strings div:first-child {
+  width: 100%;
+  margin-top: 15px;
+  border-bottom: 1px dotted rgba(128, 128, 128, 0.3);
+}
+/* line 237, ../sass/guitar.scss */
+#guitar .neck .notes, #guitar .neck .notes_0 {
+  position: absolute;
+  z-index: 12;
+  width: 402px;
+  height: 161px;
+  margin-left: 8px;
+}
+/* line 247, ../sass/guitar.scss */
+#guitar .neck .notes div:last-child .note, #guitar .neck .notes_0 div:last-child .note {
+  padding-bottom: 5px;
+}
+/* line 251, ../sass/guitar.scss */
+#guitar .neck .notes .note, #guitar .neck .notes_0 .note {
+  float: left;
+  width: 24px;
+  padding: 4px 26px 0px 26px;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -ms-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -ms-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 262, ../sass/guitar.scss */
+#guitar .neck .notes .note:hover, #guitar .neck .notes .note.active, #guitar .neck .notes_0 .note:hover, #guitar .neck .notes_0 .note.active {
+  cursor: hand;
+  opacity: 1;
+}
+/* line 268, ../sass/guitar.scss */
+#guitar .neck .notes .note:active .dot, #guitar .neck .notes_0 .note:active .dot {
+  -webkit-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+}
+/* line 274, ../sass/guitar.scss */
+#guitar .neck .notes .note.active .dot, #guitar .neck .notes_0 .note.active .dot {
+  -webkit-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+/* line 281, ../sass/guitar.scss */
+#guitar .neck .notes .note.active:active .dot, #guitar .neck .notes_0 .note.active:active .dot {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* line 286, ../sass/guitar.scss */
+#guitar .neck .notes .note .dot, #guitar .neck .notes_0 .note .dot {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background: #331a18;
+  font-family: League;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+/* line 309, ../sass/guitar.scss */
+#guitar .neck .notes_0 {
+  width: 30px;
+  margin-left: -60px;
+}
+/* line 313, ../sass/guitar.scss */
+#guitar .neck .notes_0 .note {
+  clear: both;
+  opacity: 0.5;
+}
+/* line 317, ../sass/guitar.scss */
+#guitar .neck .notes_0 .note .dot {
+  border: 1px solid rgba(128, 128, 128, 0.7);
+}
+/* line 323, ../sass/guitar.scss */
+#guitar .neck .notes_0 .note:active .dot {
+  -webkit-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  -moz-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+}
+/* line 329, ../sass/guitar.scss */
+#guitar .neck .notes_0 .note.active .dot {
+  -webkit-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  -moz-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+/* line 336, ../sass/guitar.scss */
+#guitar .neck .notes_0 .note.active:active .dot {
+  -webkit-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  -moz-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
+  border: 1px solid rgba(128, 128, 128, 0.7);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 350, ../sass/guitar.scss */
+  #guitar {
+    background: url("../img/purty_wood@2x.jpg") repeat;
+    background-size: 50%;
+  }
+  /* line 354, ../sass/guitar.scss */
+  #guitar .neck {
+    background: url("../img/wood@2x.jpg") repeat;
+    background-size: 50%;
+  }
+}

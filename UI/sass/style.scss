@@ -1,0 +1,23 @@
+@import "normalizeHBP5.css";
+@import "base";
+@import "compass/css3/user-interface";
+
+$img : "../img/";
+	
+$neck_length: 410px;
+
+@font-face {
+  font-family: "League";
+  src: url('fonts/League/League_Gothic-webfont.eot');
+  src: url('fonts/League/League_Gothic-webfont.eot?#iefix') format('eot'), 
+  	   url('fonts/League/League_Gothic-webfont.ttf') format('truetype'), 
+  	   url('fonts/League/League_Gothic-webfont.woff') format('woff'), 
+  	   url('fonts/League/League_Gothic-webfont.svg') format('svg');
+  font-weight: normal;
+}
+.font_league{
+	font-family:League;
+}
+
+@import "main.scss";
+@import "guitar.scss";
