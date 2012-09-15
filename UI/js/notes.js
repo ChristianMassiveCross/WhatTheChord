@@ -1,7 +1,7 @@
 var notes_0 = [
 
 	{name: "e",  nr:0},
-	{name: "b",  nr:0},
+	{name: "h",  nr:0},
 	{name: "g",  nr:0},
 	{name: "d",  nr:0},
 	{name: "a",  nr:0},
@@ -16,7 +16,7 @@ var notes_e = [
 	{name: "g#", nr:4},
 	{name: "a",  nr:5},
 	{name: "a#", nr:6},
-	{name: "b",  nr:7},
+	{name: "h",  nr:7},
 	{name: "c",  nr:8},
 	{name: "c#", nr:9},
 	{name: "d",  nr:10},
@@ -27,7 +27,7 @@ var notes_e = [
 var notes_a = [
 
 	{name: "a#", nr:1},
-	{name: "b",  nr:2},
+	{name: "h",  nr:2},
 	{name: "c",  nr:3},
 	{name: "c#", nr:4},
 	{name: "d",  nr:5},
@@ -50,7 +50,7 @@ var notes_d = [
 	{name: "g#", nr:6},
 	{name: "a",  nr:7},
 	{name: "a#", nr:8},
-	{name: "b",  nr:9},
+	{name: "h",  nr:9},
 	{name: "c",  nr:10},
 	{name: "c#", nr:11},
 	{name: "d",  nr:12}
@@ -60,7 +60,7 @@ var notes_g = [
 	{name: "g#", nr:1},
 	{name: "a",  nr:2},
 	{name: "a#", nr:3},
-	{name: "b",  nr:4},
+	{name: "h",  nr:4},
 	{name: "c",  nr:5},
 	{name: "c#", nr:6},
 	{name: "d",  nr:7},
@@ -84,6 +84,6 @@ var notes_b = [
 	{name: "g#", nr:9},
 	{name: "a",  nr:10},
 	{name: "a#", nr:11},
-	{name: "b",  nr:12}
+	{name: "h",  nr:12}
 
 ];

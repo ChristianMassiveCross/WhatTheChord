@@ -1,9 +1,12 @@
 /*
-*	Controller for picking notes on the guitar
+*	Controller for selecting notes on the guitar & get the suitable chord
 *
 *	@author		Thomas Hurtig <contact@thomashurtig.de>
 *	@version	0.1
 */
+
+// initialize Chord Mapping	
+var chordMapping = new chordMapping();
 
 
 function GuitarController($scope) {
@@ -12,7 +15,6 @@ function GuitarController($scope) {
 
 	$scope.notes_clicked = [];
 	$scope.notes_0		 = [];
-	$scope.chord         = getChord($scope.notes_clicked);
 
 	var last_mouse_x 	 = 0;
 	$scope.numbers       = false;
@@ -22,6 +24,7 @@ function GuitarController($scope) {
 	angular.copy(notes_0, $scope.notes_clicked);
 	angular.copy(notes_0, $scope.notes_0);
 
+	$scope.chord         = getChord($scope.notes_clicked);
 
 	setNotes(0);					//initialize notes with fret 0
 	$scope.setNotes = setNotes;
@@ -150,6 +153,48 @@ function GuitarController($scope) {
 
 }
 
+
+
+/*
+*	Returns builded chord with chord name and additional notation (eg. chord.name=e, chord.add=maj7) 
+*	from clicked_notes array
+*
+*	@param		Array
+*	@return 	{name, add}
+*/
+
 function getChord(notes) {
-	return {name: 'A maj 7'};
+
+	var notes 	  = angular.copy(notes);
+	var noteNames = [];
+	var lastName  = '';
+
+	notes.sort( function(a, b) {
+		return a.name < b.name;
+	});
+
+
+	for (var i = notes.length - 1; i >= 0; i--) {
+
+		var name = notes[i].name;
+
+		if (lastName != name) {
+
+			noteNames.push(name);	
+
+		}
+
+		lastName = name;
+	}
+	
+	var buildedChord = chordMapping.buildChord( chordMapping.notesToNumbers(noteNames) );
+
+	if (buildedChord[1] != null) {
+
+		return {name: buildedChord[1], add: buildedChord[0]};
+
+	} else{
+
+		return null;
+	}
 }

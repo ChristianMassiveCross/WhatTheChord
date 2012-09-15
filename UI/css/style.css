@@ -12,7 +12,7 @@
 /*
 * Module Imports
 */
-/* line 66, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 66, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 87.5%;
   line-height: 1.5em;
@@ -56,7 +56,7 @@ body {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .page:after {
   content: "";
   display: table;
@@ -81,14 +81,20 @@ footer {
   display: inline;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
+.small {
+  font-size: 0.85714em;
+  line-height: 1.75em;
+}
+
+/* line 40, ../sass/main.scss */
 .show {
   visibility: visible;
   opacity: 1;
   -webkit-transition-delay: 0s;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 .hide {
   visibility: hidden;
   opacity: 0;
@@ -136,7 +142,12 @@ footer {
   color: rgba(25, 25, 25, 0.9);
   text-shadow: 2px 1px 0px rgba(255, 255, 255, 0.7);
 }
-/* line 28, ../sass/guitar.scss */
+/* line 26, ../sass/guitar.scss */
+#guitar .result h1 .small {
+  font-size: 0.78571em;
+  line-height: 1.90909em;
+}
+/* line 32, ../sass/guitar.scss */
 #guitar .controls {
   margin-left: 10.20408%;
   margin-right: 10.20408%;
@@ -149,7 +160,7 @@ footer {
   padding-bottom: 0em;
   margin-bottom: 0em;
 }
-/* line 33, ../sass/guitar.scss */
+/* line 37, ../sass/guitar.scss */
 #guitar .controls .fret_slider {
   width: 410px;
   height: 20px;
@@ -167,7 +178,7 @@ footer {
   background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
   background: linear-gradient(left, rgba(255, 255, 255, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 8.33%, rgba(0, 0, 0, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 16.66%, rgba(255, 255, 255, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 24.99%, rgba(0, 0, 0, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 33.32%, rgba(255, 255, 255, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 41.65%, rgba(0, 0, 0, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 49.98%, rgba(255, 255, 255, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 58.31%, rgba(0, 0, 0, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 66.64%, rgba(255, 255, 255, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 74.97%, rgba(0, 0, 0, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 83.3%, rgba(255, 255, 255, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 91.63%, rgba(0, 0, 0, 0.3) 100%);
 }
-/* line 58, ../sass/guitar.scss */
+/* line 62, ../sass/guitar.scss */
 #guitar .controls .fret_slider .slider {
   position: relative;
   z-index: 20;
@@ -183,12 +194,12 @@ footer {
   background-color: rgba(128, 0, 0, 0.2);
   cursor: hand;
 }
-/* line 75, ../sass/guitar.scss */
+/* line 79, ../sass/guitar.scss */
 #guitar .controls .fret_slider .slider:hover {
   border: 1px solid gray;
   background-color: rgba(128, 0, 0, 0.3);
 }
-/* line 82, ../sass/guitar.scss */
+/* line 86, ../sass/guitar.scss */
 #guitar .controls .fret_slider .numbers {
   position: absolute;
   z-index: 19;
@@ -196,24 +207,24 @@ footer {
   margin-top: 2px;
   font-family: League;
 }
-/* line 91, ../sass/guitar.scss */
+/* line 95, ../sass/guitar.scss */
 #guitar .controls .fret_slider .numbers span {
   float: left;
   margin-right: 64px;
 }
-/* line 95, ../sass/guitar.scss */
+/* line 99, ../sass/guitar.scss */
 #guitar .controls .fret_slider .numbers span:first-child {
   margin-left: 80px;
 }
-/* line 98, ../sass/guitar.scss */
+/* line 102, ../sass/guitar.scss */
 #guitar .controls .fret_slider .numbers span:nth-child(4) {
   margin-right: 98px;
 }
-/* line 101, ../sass/guitar.scss */
+/* line 105, ../sass/guitar.scss */
 #guitar .controls .fret_slider .numbers span:last-child {
   margin-right: 0;
 }
-/* line 108, ../sass/guitar.scss */
+/* line 112, ../sass/guitar.scss */
 #guitar .controls button {
   width: 35px;
   height: 35px;
@@ -225,7 +236,7 @@ footer {
   border-radius: 7px;
 }
 
-/* line 121, ../sass/guitar.scss */
+/* line 125, ../sass/guitar.scss */
 #guitar .neck {
   margin-left: 10.20408%;
   width: 410px;
@@ -243,7 +254,7 @@ footer {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 137, ../sass/guitar.scss */
+/* line 141, ../sass/guitar.scss */
 #guitar .neck .sticks div {
   width: 16.66667%;
   float: left;
@@ -267,7 +278,7 @@ footer {
   background: linear-gradient(to right, #eae3d8 0%, #dad2c2 30%, #c4b7a2 57%, #f3e2c1 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae3d8', endColorstr='#f3e2c1',GradientType=1 );
 }
-/* line 157, ../sass/guitar.scss */
+/* line 161, ../sass/guitar.scss */
 #guitar .neck .sticks div:nth-last-child(-n+5) {
   width: 5px;
   height: 163px;
@@ -277,7 +288,7 @@ footer {
   -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
 }
-/* line 167, ../sass/guitar.scss */
+/* line 171, ../sass/guitar.scss */
 #guitar .neck .dots {
   position: absolute;
   z-index: 10;
@@ -286,11 +297,11 @@ footer {
   overflow: hidden;
   top: 195.5px;
 }
-/* line 177, ../sass/guitar.scss */
+/* line 181, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper {
   position: absolute;
 }
-/* line 181, ../sass/guitar.scss */
+/* line 185, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div {
   position: absolute;
   width: 20px;
@@ -303,52 +314,52 @@ footer {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid gray;
 }
-/* line 193, ../sass/guitar.scss */
+/* line 197, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div span {
   font-family: League;
   line-height: 22px;
   margin: 7px;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 200, ../sass/guitar.scss */
+/* line 204, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div:nth-child(1) {
   margin-left: 185px;
 }
-/* line 203, ../sass/guitar.scss */
+/* line 207, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div:nth-child(2) {
   margin-left: 335px;
 }
-/* line 206, ../sass/guitar.scss */
+/* line 210, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div:nth-child(3) {
   margin-left: 485px;
 }
-/* line 209, ../sass/guitar.scss */
+/* line 213, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div:nth-child(4) {
   margin-left: 635px;
 }
-/* line 212, ../sass/guitar.scss */
+/* line 216, ../sass/guitar.scss */
 #guitar .neck .dots .wrapper div:nth-child(5) {
   display: none;
 }
-/* line 219, ../sass/guitar.scss */
+/* line 223, ../sass/guitar.scss */
 #guitar .neck .strings {
   position: absolute;
   z-index: 11;
   width: 400px;
   margin-left: 10px;
 }
-/* line 225, ../sass/guitar.scss */
+/* line 229, ../sass/guitar.scss */
 #guitar .neck .strings div {
   margin-top: 25px;
   border-bottom: 1px dotted rgba(128, 128, 128, 0.3);
 }
-/* line 229, ../sass/guitar.scss */
+/* line 233, ../sass/guitar.scss */
 #guitar .neck .strings div:first-child {
   width: 100%;
   margin-top: 15px;
   border-bottom: 1px dotted rgba(128, 128, 128, 0.3);
 }
-/* line 237, ../sass/guitar.scss */
+/* line 241, ../sass/guitar.scss */
 #guitar .neck .notes, #guitar .neck .notes_0 {
   position: absolute;
   z-index: 12;
@@ -356,11 +367,11 @@ footer {
   height: 161px;
   margin-left: 8px;
 }
-/* line 247, ../sass/guitar.scss */
+/* line 251, ../sass/guitar.scss */
 #guitar .neck .notes div:last-child .note, #guitar .neck .notes_0 div:last-child .note {
   padding-bottom: 5px;
 }
-/* line 251, ../sass/guitar.scss */
+/* line 255, ../sass/guitar.scss */
 #guitar .neck .notes .note, #guitar .neck .notes_0 .note {
   float: left;
   width: 24px;
@@ -382,29 +393,29 @@ footer {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 262, ../sass/guitar.scss */
+/* line 266, ../sass/guitar.scss */
 #guitar .neck .notes .note:hover, #guitar .neck .notes .note.active, #guitar .neck .notes_0 .note:hover, #guitar .neck .notes_0 .note.active {
   cursor: hand;
   opacity: 1;
 }
-/* line 268, ../sass/guitar.scss */
+/* line 272, ../sass/guitar.scss */
 #guitar .neck .notes .note:active .dot, #guitar .neck .notes_0 .note:active .dot {
   -webkit-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
   -moz-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
 }
-/* line 274, ../sass/guitar.scss */
+/* line 278, ../sass/guitar.scss */
 #guitar .neck .notes .note.active .dot, #guitar .neck .notes_0 .note.active .dot {
   -webkit-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
   -moz-box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
-/* line 281, ../sass/guitar.scss */
+/* line 285, ../sass/guitar.scss */
 #guitar .neck .notes .note.active:active .dot, #guitar .neck .notes_0 .note.active:active .dot {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* line 286, ../sass/guitar.scss */
+/* line 290, ../sass/guitar.scss */
 #guitar .neck .notes .note .dot, #guitar .neck .notes_0 .note .dot {
   width: 20px;
   height: 20px;
@@ -424,34 +435,34 @@ footer {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 309, ../sass/guitar.scss */
+/* line 313, ../sass/guitar.scss */
 #guitar .neck .notes_0 {
   width: 30px;
   margin-left: -60px;
 }
-/* line 313, ../sass/guitar.scss */
+/* line 317, ../sass/guitar.scss */
 #guitar .neck .notes_0 .note {
   clear: both;
   opacity: 0.5;
 }
-/* line 317, ../sass/guitar.scss */
+/* line 321, ../sass/guitar.scss */
 #guitar .neck .notes_0 .note .dot {
   border: 1px solid rgba(128, 128, 128, 0.7);
 }
-/* line 323, ../sass/guitar.scss */
+/* line 327, ../sass/guitar.scss */
 #guitar .neck .notes_0 .note:active .dot {
   -webkit-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
   -moz-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
   box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
 }
-/* line 329, ../sass/guitar.scss */
+/* line 333, ../sass/guitar.scss */
 #guitar .neck .notes_0 .note.active .dot {
   -webkit-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
   -moz-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
   box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
-/* line 336, ../sass/guitar.scss */
+/* line 340, ../sass/guitar.scss */
 #guitar .neck .notes_0 .note.active:active .dot {
   -webkit-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
   -moz-box-shadow: 0 0 15px rgba(128, 128, 128, 0.7);
@@ -460,12 +471,12 @@ footer {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 350, ../sass/guitar.scss */
+  /* line 354, ../sass/guitar.scss */
   #guitar {
     background: url("../img/purty_wood@2x.jpg") repeat;
     background-size: 50%;
   }
-  /* line 354, ../sass/guitar.scss */
+  /* line 358, ../sass/guitar.scss */
   #guitar .neck {
     background: url("../img/wood@2x.jpg") repeat;
     background-size: 50%;

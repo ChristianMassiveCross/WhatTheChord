@@ -22,6 +22,10 @@
 
 			color:rgba(25,25,25, 0.9);
 			@include single-text-shadow(2px,1px,0px,rgba(white, 0.7));
+
+			.small{
+				@include adjust-font-size-to(11px);
+			}
 		}
 	}
 
