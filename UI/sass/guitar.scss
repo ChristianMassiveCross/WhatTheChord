@@ -81,6 +81,12 @@
 					background-color:rgba(maroon,0.3);
 				}
 
+				&.transition{
+					@include transition-property(left);
+	  				@include transition-duration(0.1s);
+	  				@include transition-timing-function(ease-out);
+				}
+
 			}
 
 			.numbers{

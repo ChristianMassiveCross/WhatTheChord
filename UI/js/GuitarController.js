@@ -124,24 +124,51 @@ function GuitarController($scope) {
 		var target   = angular.element($event.target);
 		var dif_x    = $event.clientX - last_mouse_x;
 		var slider_x = target.css("left");
+
+		target.removeClass('transition');
 		
 		slider_x = (slider_x == '') ? 0 : slider_x;
-
 		var new_x = parseInt(slider_x) + dif_x;
+
 
 		if (dragSlider && new_x >= 0 && new_x <= 203) {
 
 			target.css("left", new_x +"px");
-
+			
 		}
 
 		last_mouse_x = $event.clientX;
 
 	}
 
-	$scope.roundSliderPos = function ($event) {
+	$scope.roundSlider = function ($event) {
 
-		// var pos = [33, 66, 100];
+		var target   = angular.element($event.target);
+		var new_x	 = parseInt(target.css("left"));
+
+		var pos_locks 	 = [0, 33, 67, 100, 135, 169, 203];
+		var pos_lock_idx = '';
+		var rounded_pos  = 0;
+		var last 	 	 = 0;
+		var x 			 = 0;
+
+		target.addClass('transition');
+
+
+		for (var i = 0; i <= 6; i++) {
+
+			x = Math.abs(new_x - pos_locks[i]);
+
+			if( x < last ) {
+
+				rounded_pos = pos_locks[i];
+			}
+
+			last = x;
+		
+		}
+
+		target.css("left", rounded_pos +"px");
 		
 	}
 
