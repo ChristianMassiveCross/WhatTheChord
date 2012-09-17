@@ -6,3 +6,4 @@
 *.ear
 #Tempfiles from gedit#
 *.*~
+.DS_Store

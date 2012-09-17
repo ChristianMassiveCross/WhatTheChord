@@ -1,0 +1,21 @@
+/* TEAM */
+  WhatTheChord: Christian
+  Contact:
+  Twitter: 
+  From:
+
+  UI: Thomas Hurtig
+  Site: http://thomashurtig.de
+  Twitter: @_thurti
+  Location: Hannover, Germany
+
+
+/* THANKS */
+
+    
+
+/* SITE */
+  Last update:
+  Standards: HTML5, CSS3
+  Components: AngularJS, HTML5BP, Compass, Sass
+  IDE: Sublime Text 2, Pixelmator

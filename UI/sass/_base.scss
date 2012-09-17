@@ -1,0 +1,97 @@
+/**
+********************************	
+*
+*	Basic CSS Configuration	
+*
+********************************
+**/
+
+/*
+* Set Variables
+*/
+
+// Grid Layout
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$break			: 12;
+
+// Font-Settings
+$base-font-size: 	14px;
+$base-line-height: 	21px;
+$font-color: 		#171717;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+/*
+* Module Imports
+*/
+@import "compass";
+@import "susy";
+
+@include establish-baseline;
+
+/*
+* Mixins
+*/
+@mixin debug{
+	border: 1px solid red;
+}
+@mixin hide{
+	visibility:hidden;
+	opacity:0;
+}
+@mixin show{
+  visibility:visible;
+  opacity:1;
+  -webkit-transition-delay:0s;
+}
+
+
+@mixin button($font: $blueprint-font-family, $border-color: $font-color, $bg-color: $font-color, $font-col:''){
+	
+	@if $font-col == ''{
+		$font-col: invert($bg-color);
+	}
+	
+	display: inline;
+	padding: 0.5em .5em 0.5em .5em;	
+	@include adjust-leading-to(2);
+	margin: 1px 1em;	//shadow border
+
+	text-decoration:none;
+	color:$font-col;
+	font-family:#{$font};
+	
+	border: 1px solid $border-color;
+	background-color: lighten($bg-color, 10);
+	@include border-radius(4px, 4px);	
+	@include background(linear-gradient(top, lighten($bg-color, 20), lighten($bg-color, 0) 50%));
+	@include single-box-shadow($border-color, 0px, 0px, 1px, 0px);
+ 	text-shadow: 0 -1px 0 rgba(200,200,200,.25);
+
+	&:hover{
+		background-color: lighten($bg-color, 15);
+		@include background(linear-gradient(top, lighten($bg-color, 25), lighten($bg-color, 2) 50%));
+		color: $font-col;
+	}
+	&:active{
+		background-color: lighten($bg-color, 0);
+		@include single-box-shadow($border-color, 0px, 0px, 5px, 0px, inset);
+		@include background(linear-gradient(top, lighten($bg-color, 0), lighten($bg-color, 7) 50%));
+	}
+	&:visited{
+		background-color: lighten($bg-color, 10);		
+		color: $font-col;
+	}
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+}
+
