@@ -4,13 +4,14 @@ WhatTheChord UI
 A web user interface for [WhatTheChord](https://github.com/ChristianMassiveCross/WhatTheChord) chordfinder based on AngularJS. 
 
 
-## ToDo
-- connect to whatthechord to get chord for selected notes
+## ToDo & Ideas (unordered)
 - style control buttons (Number/Notes, Clear)
 - make strings disableable
 - bind control slider to fretboard position
-- round slider position to next nearest fret position onMouseUp
+- preview chord on mouse over note
 - input chord name and get possible notes on guitar
+- do some cross browser testing
+- media-queries for mobile version
 - add piano?
 
 
