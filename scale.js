@@ -1,5 +1,5 @@
 function scale (){
-    this.allNotes = new Array("c","c#","d","d#","e","f","f#","g","g#","a","a#","h");
+    this.allNotes = new Array("c","c#","d","d#","e","f","f#","g","g#","a","a#","b");
 }
 //---------------------------------------------------------------------------------------- 
 scale.prototype.getScale = function(Value){
